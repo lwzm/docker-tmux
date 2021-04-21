@@ -2,8 +2,8 @@ FROM lwzm/ttyd
 
 LABEL maintainer="lwzm@qq.com"
 
-RUN apk add --no-cache openssh-client
-ENV TTYD_OPTS "-R"
-CMD [ "ssh-tmux" ]
+RUN apk add --no-cache tmux
+ENV TTYD_OPTS="-R" S=""
+CMD [ "tmux-attach" ]
 
-COPY ssh-tmux /bin
+COPY tmux-attach /bin

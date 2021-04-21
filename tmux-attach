@@ -1,0 +1,5 @@
+#!/bin/sh
+
+S=${S:-/tmux}
+
+exec tmux -S $S -u -2 a
